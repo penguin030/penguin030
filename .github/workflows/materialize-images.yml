@@ -1,0 +1,49 @@
+name: Finalize restored image files
+on:
+  push:
+    paths: ['.github/workflows/materialize-images.yml', 'asset-seeds/**']
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify and restore original image bytes
+        run: |
+          python -m pip install pillow
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import base64, hashlib, json
+          expected={'browseroneclick':'3b5cf907621411ff566aa9cfff2d177461ab5ef5be195ed61e4b790da9134887','mobile':'28d50c3abc2ec6a1e78d7474a23921fa5dd77c71e581119905884c96eaa96c18'}
+          for name,sha in expected.items():
+              data=base64.b64decode(Path(f'asset-seeds/{name}.webp.b64').read_text(),validate=False)
+              assert hashlib.sha256(data).hexdigest()==sha, f'Image integrity mismatch: {name}'
+              Path(f'public/assets/{name}.webp').write_bytes(data)
+          expected_names=['manual_14','manual_24','manual_27','manual_29','oneclick40','weboneclick','browseroneclick','mobile']
+          images=[]
+          for name in expected_names:
+              path=Path(f'public/assets/{name}.webp')
+              with Image.open(path) as im:
+                  im.load(); assert im.width>100 and im.height>100
+                  images.append({'name':path.name,'width':im.width,'height':im.height,'bytes':path.stat().st_size})
+          Path('image-validation.json').write_text(json.dumps(images,indent=2))
+          print(json.dumps(images,indent=2))
+          PY
+      - name: Save all eight original images permanently
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/assets image-validation.json
+          git diff --cached --quiet || git commit -m 'Restore and verify all eight original portfolio images'
+          git pull --rebase origin main
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: complete-repaired-portfolio
+          path: |
+            public
+            image-validation.json
+          retention-days: 7
