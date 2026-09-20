@@ -1,0 +1,26 @@
+name: Recover screenshots from portfolio bundle
+on:
+  push:
+    paths: ['.github/workflows/recover-bundle-images.yml']
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Download the existing portfolio bundle
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs/promises';await fs.mkdir('bundle-backup',{recursive:true});
+          const url='https://hyojin-portfolio.vercel.app/static/js/main.bf46fe6b.js';const r=await fetch(url);if(!r.ok)throw Error(r.status);const text=await r.text();await fs.writeFile('bundle-backup/portfolio-bundle.js',text);
+          const hosts=['hyojin-techlabs-assets','hyojin-oneclick-screens-a','hyojin-oneclick-screens-b','hyojin-browser-oneclick-asset'];
+          const paths=['browser-oneclick.svg','browser.svg','index.svg','asset.svg','screen.svg','browser_oneclick.webp','browseroneclick2.webp','browser-oneclick-main.webp','browseroneclick-main.webp','mobile-flow.webp','mobile-oneclick.webp','oneclick-mobile-flow.webp'];
+          const report=[];await Promise.all(hosts.flatMap(host=>paths.map(async path=>{const u='https://'+host+'.vercel.app/'+path;try{const rr=await fetch(u,{signal:AbortSignal.timeout(5000)});const ct=rr.headers.get('content-type');if(rr.ok&&ct?.startsWith('image/')){const bytes=Buffer.from(await rr.arrayBuffer());const name=host+'-'+path;await fs.writeFile('bundle-backup/'+name,bytes);report.push({url:u,path:name,bytes:bytes.length,type:ct});}}catch{}})));
+          await fs.writeFile('bundle-backup/found.json',JSON.stringify(report,null,2));
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: original-bundle-images
+          path: bundle-backup
+          retention-days: 7
