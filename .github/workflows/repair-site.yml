@@ -1,0 +1,37 @@
+name: Build repaired static portfolio source
+on:
+  push:
+    paths: ['repair_site.py', '.github/workflows/repair-site.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: portfolio-source-backup
+          run-id: 35504700199
+          github-token: ${{ github.token }}
+          path: source-backup
+      - name: Reconstruct static source and remove QA
+        run: |
+          python -m pip install beautifulsoup4
+          python repair_site.py
+      - name: Commit full static source
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public
+          git diff --cached --quiet || git commit -m 'Remove QA and runtime dependencies; preserve all portfolio imagery'
+          git pull --rebase origin main
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: repaired-portfolio-site
+          path: public
+          retention-days: 7
