@@ -1,0 +1,423 @@
+{
+  "generatedAt": "2026-09-20T10:18:06.099Z",
+  "images": [
+    {
+      "name": "browseroneclick",
+      "success": false,
+      "attempts": [
+        {
+          "url": "https://hyojin-serviceops-69i8sc5d0-penguinantarctica123-2520s-projects.vercel.app/assets/browseroneclick.webp",
+          "status": 410,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-browser-oneclick-asset.vercel.app/browseroneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-browser-oneclick-asset.vercel.app/assets/browseroneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-browser-oneclick-asset.vercel.app/browseroneclick.png",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-browser-oneclick-asset.vercel.app/assets/browseroneclick.png",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-browser-oneclick-asset.vercel.app/browseroneclick.svg",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-browser-oneclick-asset.vercel.app/image.svg",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-browser-oneclick-asset.vercel.app/image.png",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-browser-oneclick-asset.vercel.app/image.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-a.vercel.app/assets/browseroneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-a.vercel.app/browseroneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-b.vercel.app/assets/browseroneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-b.vercel.app/browseroneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/assets/browseroneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/browseroneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-portfolio.vercel.app/assets/browseroneclick.webp",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-portfolio.vercel.app/browseroneclick.webp",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "name": "manual_14",
+      "success": true,
+      "attempts": [
+        {
+          "url": "https://hyojin-serviceops-lfe9uhj2u-penguinantarctica123-2520s-projects.vercel.app/manual_14.webp",
+          "status": 200,
+          "type": "image/webp"
+        }
+      ],
+      "path": "/assets/manual_14.webp",
+      "bytes": 6372,
+      "sha256": "04bd54e53b528d6fed682fabbbedb188e7d4f2d5e50f57eecd1e04c76745678a",
+      "source": "https://hyojin-serviceops-lfe9uhj2u-penguinantarctica123-2520s-projects.vercel.app/manual_14.webp"
+    },
+    {
+      "name": "manual_24",
+      "success": true,
+      "attempts": [
+        {
+          "url": "https://hyojin-serviceops-lfe9uhj2u-penguinantarctica123-2520s-projects.vercel.app/manual_24.webp",
+          "status": 200,
+          "type": "image/webp"
+        }
+      ],
+      "path": "/assets/manual_24.webp",
+      "bytes": 9630,
+      "sha256": "3ad598fbecc946f9cc6864705bc0651738c26ec27f9c747b58f4742103e9b3c0",
+      "source": "https://hyojin-serviceops-lfe9uhj2u-penguinantarctica123-2520s-projects.vercel.app/manual_24.webp"
+    },
+    {
+      "name": "manual_27",
+      "success": true,
+      "attempts": [
+        {
+          "url": "https://hyojin-serviceops-lfe9uhj2u-penguinantarctica123-2520s-projects.vercel.app/manual_27.webp",
+          "status": 200,
+          "type": "image/webp"
+        }
+      ],
+      "path": "/assets/manual_27.webp",
+      "bytes": 6716,
+      "sha256": "b21d3d879ddb7af83fe7db574bb87184b457f2d6d70d5fb7206483bca07f4b30",
+      "source": "https://hyojin-serviceops-lfe9uhj2u-penguinantarctica123-2520s-projects.vercel.app/manual_27.webp"
+    },
+    {
+      "name": "manual_29",
+      "success": true,
+      "attempts": [
+        {
+          "url": "https://hyojin-serviceops-lfe9uhj2u-penguinantarctica123-2520s-projects.vercel.app/manual_29.webp",
+          "status": 200,
+          "type": "image/webp"
+        }
+      ],
+      "path": "/assets/manual_29.webp",
+      "bytes": 11208,
+      "sha256": "cf10082339f4b2eea3995143df6c02e3bb8b329e052d77119c9ae6e40b1ae22c",
+      "source": "https://hyojin-serviceops-lfe9uhj2u-penguinantarctica123-2520s-projects.vercel.app/manual_29.webp"
+    },
+    {
+      "name": "mobile",
+      "success": false,
+      "attempts": [
+        {
+          "url": "https://hyojin-serviceops-69i8sc5d0-penguinantarctica123-2520s-projects.vercel.app/assets/mobile.webp",
+          "status": 410,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/mobile.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/assets/mobile.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/mobile.png",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/assets/mobile.png",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/mobile.svg",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/image.svg",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/image.png",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/image.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-a.vercel.app/assets/mobile.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-a.vercel.app/mobile.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-b.vercel.app/assets/mobile.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-b.vercel.app/mobile.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/assets/mobile.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/mobile.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-portfolio.vercel.app/assets/mobile.webp",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-portfolio.vercel.app/mobile.webp",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "name": "oneclick40",
+      "success": true,
+      "attempts": [
+        {
+          "url": "https://hyojin-serviceops-69i8sc5d0-penguinantarctica123-2520s-projects.vercel.app/assets/oneclick40.webp",
+          "status": 410,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick40-asset.vercel.app/oneclick40.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick40-asset.vercel.app/assets/oneclick40.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick40-asset.vercel.app/oneclick40.png",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick40-asset.vercel.app/assets/oneclick40.png",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick40-asset.vercel.app/oneclick40.svg",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick40-asset.vercel.app/image.svg",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick40-asset.vercel.app/image.png",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick40-asset.vercel.app/image.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-a.vercel.app/assets/oneclick40.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-a.vercel.app/oneclick40.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-b.vercel.app/assets/oneclick40.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-b.vercel.app/oneclick40.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/assets/oneclick40.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/oneclick40.webp",
+          "status": 200,
+          "type": "image/webp"
+        }
+      ],
+      "path": "/assets/oneclick40.webp",
+      "bytes": 6268,
+      "sha256": "8b25b69335d599a297c7fbd4f2dc594fa384b185ad6d8176c515bea4b0d1564c",
+      "source": "https://hyojin-techlabs-assets.vercel.app/oneclick40.webp"
+    },
+    {
+      "name": "weboneclick",
+      "success": false,
+      "attempts": [
+        {
+          "url": "https://hyojin-serviceops-69i8sc5d0-penguinantarctica123-2520s-projects.vercel.app/assets/weboneclick.webp",
+          "status": 410,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-web-oneclick-asset.vercel.app/weboneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-web-oneclick-asset.vercel.app/assets/weboneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-web-oneclick-asset.vercel.app/weboneclick.png",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-web-oneclick-asset.vercel.app/assets/weboneclick.png",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-web-oneclick-asset.vercel.app/weboneclick.svg",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-web-oneclick-asset.vercel.app/image.svg",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-web-oneclick-asset.vercel.app/image.png",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-web-oneclick-asset.vercel.app/image.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-a.vercel.app/assets/weboneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-a.vercel.app/weboneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-b.vercel.app/assets/weboneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-oneclick-screens-b.vercel.app/weboneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/assets/weboneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-techlabs-assets.vercel.app/weboneclick.webp",
+          "status": 404,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-portfolio.vercel.app/assets/weboneclick.webp",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "https://hyojin-portfolio.vercel.app/weboneclick.webp",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    }
+  ]
+}
