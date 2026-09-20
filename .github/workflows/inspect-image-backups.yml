@@ -1,0 +1,27 @@
+name: Inspect original portfolio image backups
+on:
+  push:
+    paths: ['.github/workflows/inspect-image-backups.yml']
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Save original resource references
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs/promises';await fs.mkdir('backups',{recursive:true});
+          const hosts=['hyojin-portfolio','hyojin-techlabs-assets','hyojin-browser-oneclick-asset','hyojin-web-oneclick-asset','hyojin-techlabs-chunk1','hyojin-techlabs-chunk2','hyojin-techlabs-chunk3','hyojin-techlabs-chunk4','hyojin-oneclick-screens-a','hyojin-oneclick-screens-b'];
+          const report=[];
+          await Promise.all(hosts.map(async name=>{try{const r=await fetch('https://'+name+'.vercel.app/',{signal:AbortSignal.timeout(12000)});const t=await r.text();report.push({name,status:r.status,length:t.length,refs:[...new Set(t.match(/(?:https?:\/\/[^\s"'<>]+|[^\s"'<>]+\.(?:webp|png|jpg|svg))/g)||[])]});if(r.ok)await fs.writeFile('backups/'+name+'.html',t);}catch(e){report.push({name,error:e.message});}}));
+          const cap='https://hyojin-serviceops-jfo8zeoeh-penguinantarctica123-2520s-projects.vercel.app/api/capture';
+          try{const r=await fetch(cap+'?mode=info',{signal:AbortSignal.timeout(70000)});const t=await r.text();await fs.writeFile('backups/capture-info.json',t);if(r.ok){const p=await fetch(cap,{signal:AbortSignal.timeout(70000)});if(p.ok)await fs.writeFile('backups/previous-capture.pdf',Buffer.from(await p.arrayBuffer()));}}catch(e){report.push({captureError:e.message});}
+          await fs.writeFile('backups/refs.json',JSON.stringify(report,null,2));
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: original-image-backups
+          path: backups
+          retention-days: 7
