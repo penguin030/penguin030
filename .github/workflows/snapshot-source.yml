@@ -1,0 +1,29 @@
+name: Save portfolio source backup
+on:
+  push:
+    paths: ['.github/workflows/snapshot-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Save existing public source
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs/promises';
+          await fs.mkdir('source-backup',{recursive:true});
+          const base='https://hyojin-serviceops-3005e06g7-penguinantarctica123-2520s-projects.vercel.app';
+          const files=[['index.html','https://hyojin-serviceops.vercel.app/'],['style.css',base+'/style.css'],...[1,2,3,4].map(i=>['part'+i+'.html',base+'/part'+i+'.html'])];
+          await Promise.all(files.map(async([name,url])=>{const r=await fetch(url,{signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error(name+': '+r.status);await fs.writeFile('source-backup/'+name,Buffer.from(await r.arrayBuffer()));console.log(name,r.status);}));
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-source-backup
+          path: source-backup
+          retention-days: 7
