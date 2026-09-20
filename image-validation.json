@@ -1,0 +1,50 @@
+[
+  {
+    "name": "manual_14.webp",
+    "width": 750,
+    "height": 531,
+    "bytes": 6372
+  },
+  {
+    "name": "manual_24.webp",
+    "width": 750,
+    "height": 531,
+    "bytes": 9630
+  },
+  {
+    "name": "manual_27.webp",
+    "width": 750,
+    "height": 531,
+    "bytes": 6716
+  },
+  {
+    "name": "manual_29.webp",
+    "width": 750,
+    "height": 531,
+    "bytes": 11208
+  },
+  {
+    "name": "oneclick40.webp",
+    "width": 460,
+    "height": 329,
+    "bytes": 6268
+  },
+  {
+    "name": "weboneclick.webp",
+    "width": 460,
+    "height": 278,
+    "bytes": 4384
+  },
+  {
+    "name": "browseroneclick.webp",
+    "width": 600,
+    "height": 490,
+    "bytes": 7926
+  },
+  {
+    "name": "mobile.webp",
+    "width": 650,
+    "height": 371,
+    "bytes": 9610
+  }
+]
