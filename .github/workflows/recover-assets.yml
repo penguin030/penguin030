@@ -1,0 +1,34 @@
+name: Recover portfolio images
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'restore-assets.mjs'
+      - '.github/workflows/recover-assets.yml'
+permissions:
+  contents: write
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Recover original image files
+        run: node restore-assets.mjs
+      - name: Commit recovered images
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/assets asset-recovery-report.json
+          git diff --cached --quiet || git commit -m 'Restore original portfolio screenshots as local assets'
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: recovered-portfolio-assets
+          path: |
+            public/assets
+            asset-recovery-report.json
+          retention-days: 7
